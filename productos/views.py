@@ -59,14 +59,14 @@ def actualizar_producto(request, id ):
         pro = Producto.objects.get(id = id)
         pro.nombre = nom
         pro.marca=mar
-        pro.precio=cos
+        pro.costo=cos
         pro.piezas=pzas
         pro.fec_ing= fec
         pro.activo=act
         pro.categoria=cat
-        pro.prodescuento=des
-        pro.prostock_minimo=pizmin
-        pro.proubicacion = ubi
+        pro.descuento=des
+        pro.stock_minimo=pizmin
+        pro.ubicacion = ubi
         pro.save()
         pro =Producto.objects.all().values()
         datos = {'pro' : pro,
